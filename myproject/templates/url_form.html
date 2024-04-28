@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>URL을 단축하세요</h1>
+    
+    <!-- URL 단축 폼 -->
+    <form method="post" action="{% url 'create_short_url' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">단축</button>
+    </form>
+</body>
+</html>
